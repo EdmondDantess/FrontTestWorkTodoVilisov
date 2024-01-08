@@ -1,0 +1,21 @@
+.header {
+    height: 70px;
+    background: linear-gradient(0deg, rgba(0, 180, 255, 0.75) 15%, rgb(31, 76, 249));
+    box-shadow: 0 3px 9px black;
+}
+
+.header__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    font-weight: 700;
+    color: rgb(35, 35, 35);
+}
+
+.header_right {
+
+}
