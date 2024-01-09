@@ -25,6 +25,27 @@ code {
     border-radius: 8px;
 }
 
+select {
+    text-align: center;
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+select:hover {
+    background-color: rgba(30, 30, 30, 0.07);
+}
+input {
+    text-align: center;
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+input:hover {
+    background-color: rgba(30, 30, 30, 0.07);
+}
+
 button {
     font-weight: 700;
     color: #000000;

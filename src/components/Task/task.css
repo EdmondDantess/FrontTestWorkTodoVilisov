@@ -1,19 +1,26 @@
 .task {
+    position: relative;
     flex-direction: column;
     justify-content: center;
+    padding: 15px;
     width: 100%;
+    max-width: 350px;
     border: 1px solid black;
-    min-height: 200px;
+    border-radius: 8px;
+    max-height: 200px;
     word-break: break-all;
+    box-shadow: 3px 3px 3px black;
     overflow: auto;
     cursor: default;
 }
 
 .task:hover {
     background-color: rgba(106, 106, 106, 0.24);
+    cursor: grab;
 }
 
 .task__title {
+    text-align: center;
     border-bottom: 1px solid grey;
 }
 .task__text {
@@ -23,6 +30,28 @@
     border-bottom: 1px solid grey;
 }
 .task__status {
+    text-align: center;
     cursor: pointer;
     border-bottom: 1px solid grey;
+}
+.task__data {
+    text-align: center;
+}
+.task__delete {
+    top: 0;
+    right: 0;
+    position: absolute;
+    cursor: pointer;
+}
+.task__delete:hover {
+    background-color: #6a6a6a;
+}
+.task__edit {
+    top: 0;
+    left: 0;
+    position: absolute;
+    cursor: pointer;
+}
+.task__edit:hover {
+    background-color: #6a6a6a;
 }

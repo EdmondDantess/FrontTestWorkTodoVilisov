@@ -55,6 +55,11 @@
     margin: -1rem -1rem -1rem auto;
 }
 
+.modal-close:hover {
+    background-color: rgba(106, 106, 106, 0.24);
+    border-radius: 8px;
+}
+
 .modal-body {
     overflow: auto;
 }

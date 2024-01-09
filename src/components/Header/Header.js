@@ -1,11 +1,11 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import './header.css'
 import {useDispatch, useSelector} from 'react-redux';
-import {fetchAuthMe, logout, selectIsAuth, selectName} from '../../redux/slices/auth';
+import {logout, selectIsAuth, selectName} from '../../redux/slices/auth';
 import {openModal} from '../../redux/slices/modal';
-import {fetchTasks} from '../../redux/slices/tasks';
 import {Login} from '../Modal/Modals/Login';
 import {AddTask} from '../Modal/Modals/AddTask';
+import {ToastAlert} from '../Toast/Toast';
 
 export const Header = () => {
     const [text, setText] = useState('')
@@ -18,7 +18,6 @@ export const Header = () => {
     const logOut = () => {
         dispatch(logout())
     }
-
     const openLogin = () => {
         setVariantModal('login')
         setText('')
@@ -29,12 +28,6 @@ export const Header = () => {
         setText('')
         dispatch(openModal())
     }
-
-
-    useEffect(() => {
-        dispatch(fetchTasks())
-        dispatch(fetchAuthMe())
-    }, [])
 
     return (
         <div className={'header'}>
@@ -50,7 +43,7 @@ export const Header = () => {
                 <div className={'header_right'}>
                     {
                         isAuth
-                            ? <div>{userName}</div>
+                            ? <div>Вы вошли как: {userName}</div>
                             : <button onClick={openLogin}>Login</button>
                     }
                     {isAuth && <button onClick={logOut}>Logout</button>}
@@ -59,6 +52,8 @@ export const Header = () => {
                     && <Login setText={setText}
                               text={text}/>}
             </div>
+            <ToastAlert/>
+
         </div>
     );
 };

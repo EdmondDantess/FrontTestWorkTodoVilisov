@@ -15,8 +15,8 @@ export const Modal = ({
     if (!isModal) return null;
 
 
-    return <div className="modal" >
-        <div className="modal-dialog" onClick={e => e.stopPropagation()}>
+    return <div className="modal">
+        <div className="modal-dialog">
             <div className="modal-header">
                 <h3 className="modal-title">{title}</h3>
                 <span className="modal-close" onClick={onClose}>&#10060;</span>
@@ -30,4 +30,3 @@ export const Modal = ({
         </div>
     </div>
 }
-

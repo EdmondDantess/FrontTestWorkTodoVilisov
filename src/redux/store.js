@@ -8,7 +8,7 @@ const store = configureStore(
         reducer: {
             auth: authReducer,
             modal: modalReducer,
-            tasks: tasksReducer
+            tasks: tasksReducer,
         },
     },
 )
