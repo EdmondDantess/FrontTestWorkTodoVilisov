@@ -1,0 +1,28 @@
+.task {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    border: 1px solid black;
+    min-height: 200px;
+    word-break: break-all;
+    overflow: auto;
+    cursor: default;
+}
+
+.task:hover {
+    background-color: rgba(106, 106, 106, 0.24);
+}
+
+.task__title {
+    border-bottom: 1px solid grey;
+}
+.task__text {
+    border-bottom: 1px solid grey;
+}
+.task__author {
+    border-bottom: 1px solid grey;
+}
+.task__status {
+    cursor: pointer;
+    border-bottom: 1px solid grey;
+}

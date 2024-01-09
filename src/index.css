@@ -12,6 +12,19 @@ code {
     monospace;
 }
 
+*::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgb(213, 213, 213);
+    overflow: visible;
+}
+
+*::-webkit-scrollbar-thumb {
+    width: 20px;
+    height: 2px;
+    background-color: #788be3;
+    border-radius: 8px;
+}
+
 button {
     font-weight: 700;
     color: #000000;
@@ -31,4 +44,8 @@ button:hover {
 button:active {
     background: rgb(33, 96, 147);
     box-shadow: 0 3px rgb(33, 69, 147) inset;
+}
+
+button:disabled {
+    background: #6a6a6a;
 }
