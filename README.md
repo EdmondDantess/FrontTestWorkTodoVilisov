@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Ссылка на бэкенд репозиторий]([https://github.com/facebook/create-react-app](https://github.com/EdmondDantess/BackTestWorkTodoVilisov)).
+ Ссылка на бэкенд репозиторий ([https://github.com/facebook/create-react-app](https://github.com/EdmondDantess/BackTestWorkTodoVilisov)).
 
 ## Available Scripts
 
