@@ -36,7 +36,7 @@ export const EditAddTask = () => {
   }, []);
 
   return (
-    <div className="modal" draggable={false}>
+    <div className="modal">
       <div className="modal-dialog">
         <div className="modal-header">
           <h3 className="modal-title">Редактировать</h3>

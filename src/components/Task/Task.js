@@ -33,41 +33,42 @@ export const Task = ({
     dispatch(fetchUpdateTask({ status: e.currentTarget.value, _id: task._id }));
   };
 
-  return (
-    <div className={"task"}
-         title={task.text}
-         draggable
-         onDragStart={() => handleDragStart(task._id)}>
+  return (<React.Fragment>
+      <div className={"task"}
+           title={task.text}
+           draggable
+           onDragStart={() => handleDragStart(task._id)}>
+        <div className="task__delete" title={"удалить"} onClick={() => removeTask(task._id)}>&#10060;</div>
+        <div className="task__edit" title={"редактировать"} onClick={editTask}>✏️</div>
+        <div className={"task__title"}>
+          Название: {task.title}
+        </div>
+        <div className={"task__status"}>
+          Статус:
+          <select value={task.status}
+                  defaultValue="Ожидание"
+                  onChange={(e) => changeStatus(e)}>
+            {
+              statuses.map((el) => {
+                return <option name={el} id={el} key={el}>{el}</option>;
+              })
+            }
+          </select>
+        </div>
+        <div className={"task__author"}>
+          Кто редактировал: {task.user?.fullName}
+        </div>
+        <div className={"task__text"}>
+          Текст: {task.text}
+        </div>
+        <div className={"task__data"}>
+          Дата создания:
+          <div>{new Date(task.createdAt).toLocaleString()}</div>
+        </div>
+      </div>
       {isAuth && isModalEditTask &&
         <EditAddTask taskId={taskId} />}
-      <div className="task__delete" title={"удалить"} onClick={() => removeTask(task._id)}>&#10060;</div>
-      <div className="task__edit" title={"редактировать"} onClick={editTask}>✏️</div>
-      <div className={"task__title"}>
-        Название: {task.title}
-      </div>
-      <div className={"task__status"}>
-        Статус:
-        <select value={task.status}
-                defaultValue="Ожидание"
-                onChange={(e) => changeStatus(e)}>
-          {
-            statuses.map((el) => {
-              return <option name={el} id={el} key={el}>{el}</option>;
-            })
-          }
-        </select>
-      </div>
-      <div className={"task__author"}>
-        Кто редактировал: {task.user?.fullName}
-      </div>
-      <div className={"task__text"}>
-        Текст: {task.text}
-      </div>
-      <div className={"task__data"}>
-        Дата создания:
-        <div>{new Date(task.createdAt).toLocaleString()}</div>
-      </div>
-    </div>
+    </React.Fragment>
   )
     ;
 };
