@@ -58,7 +58,7 @@ export const Task = ({
         </select>
       </div>
       <div className={"task__author"}>
-        Кто создал: {task.user?.fullName}
+        Кто редактировал: {task.user?.fullName}
       </div>
       <div className={"task__text"}>
         Текст: {task.text}
